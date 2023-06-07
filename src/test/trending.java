@@ -36,7 +36,7 @@ public class trending {
 	        Thread.sleep(Duration.ofSeconds(3));
 	        WebElement element = driver.findElement(By.id("search"));
 	        File screenshot = element.getScreenshotAs(OutputType.FILE);
-	        String screenshotPath = "C:\\Users\\50052301\\Documents\\demo\\product.png";
+	        String screenshotPath = "test-output\\product.png";
 	        try {
 	            FileUtils.copyFile(screenshot, new File(screenshotPath));
 	            System.out.println("Captura de pantalla del elemento guardada en: " + screenshotPath);
