@@ -10,7 +10,7 @@ public class go_to_amazon {
 
     @Test
     public void goToAmazon() {
-        System.setProperty("webdriver.chrome.driver", "src\\resources\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "./chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://amazon.com");
