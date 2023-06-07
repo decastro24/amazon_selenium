@@ -14,8 +14,8 @@ import org.testng.annotations.Test;
 public class trending {
 	private WebDriver driver;
 	private List<WebElement> products;
-	
-	
+
+
 	@Test
 	public void trendProducts() throws InterruptedException {
 		driver = go_to_amazon.driver;
@@ -29,12 +29,13 @@ public class trending {
 		}		
 	}
 	
-	@Test(dependsOnMethods = "trendProducts")
+	@Test
 	public void GetTrendProducts() throws InterruptedException {
 	        WebElement product = products.get(1);
 	        product.click();
 	        Thread.sleep(Duration.ofSeconds(3));
 	        WebElement element = driver.findElement(By.id("search"));
+
 	        File screenshot = element.getScreenshotAs(OutputType.FILE);
 	        String screenshotPath = "test-output\\product.png";
 	        try {

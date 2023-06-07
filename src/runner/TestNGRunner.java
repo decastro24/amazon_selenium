@@ -1,14 +1,18 @@
 package runner;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.TestListenerAdapter;
 import org.testng.TestNG;
 import test.go_to_amazon;
+import test.trending;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.MalformedURLException;
+import java.util.List;
 import java.util.Properties;
 
 public class TestNGRunner {
@@ -23,7 +27,7 @@ public class TestNGRunner {
         System.out.println("Was here!");
         TestListenerAdapter tla = new TestListenerAdapter();
         TestNG testng = new TestNG();
-        testng.setTestClasses(new Class[] { go_to_amazon.class });
+        testng.setTestClasses(new Class[] { go_to_amazon.class, trending.class });
         testng.addListener(tla);
         testng.run();
         System.out.println("Exiting");
